@@ -1,0 +1,89 @@
+using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
+
+public class GameManager : MonoBehaviour {
+    public static GameManager sTheGlobalBehavior = null;
+
+    // public Text mGameStateEcho = null;  // Defined in UnityEngine.UI
+    // public HeroBehavior mHero = null;
+    // public MinionBehavior mMinion = null;
+    // public TurretBehavior mTurret = null;
+    // public TurretBehavior mTurret2 = null;
+    // public TurretBehavior mTurret3 = null;
+    // public TurretBehavior mTurret4 = null;
+    // private EnemySpawnSystem mEnemySystem = null;
+
+    // private CameraSupport mMainCamera;
+
+    private GameObject mHeroTmplate = null;
+    private GameObject mMinionTmplate = null;
+    private GameObject mTurretTmplate = null;
+
+
+    private void Start()
+    {
+        GameManager.sTheGlobalBehavior = this;  // Singleton pattern
+
+        // mHeroTmplate = Resources.Load<GameObject>("Prefabs/Hero");
+        // GameObject hero1 = GameObject.Instantiate(mHeroTmplate) as GameObject;
+        // hero1.transform.position = new Vector3(0f, 0f, 0f);
+        // mHero = hero1.GetComponent<HeroBehavior>();
+        
+        // mMinionTmplate = Resources.Load<GameObject>("Prefabs/Minion");
+        // GameObject minion_1 = GameObject.Instantiate(mMinionTmplate) as GameObject;
+        // minion_1.transform.position = new Vector3(-20f, 0f, 0f);
+        // mMinion = minion_1.GetComponent<MinionBehavior>();
+
+        // mTurretTmplate = Resources.Load<GameObject>("Prefabs/Turret");
+        // GameObject turret_1 = GameObject.Instantiate(mTurretTmplate) as GameObject;
+        // turret_1.transform.position = new Vector3(0.58f, -1.6f, 0f);
+        // mTurret = turret_1.GetComponent<TurretBehavior>();
+        
+        // GameObject turret_2 = GameObject.Instantiate(mTurretTmplate) as GameObject;
+        // turret_2.transform.position = new Vector3(-11.44f, 2.36f, 0f);
+        // mTurret2 = turret_2.GetComponent<TurretBehavior>();
+
+        // GameObject turret_3 = GameObject.Instantiate(mTurretTmplate) as GameObject;
+        // turret_3.transform.position = new Vector3(14.45f, 2.36f, 0f);
+        // Vector3 objectScale = turret_3.transform.localScale;
+        // turret_3.transform.localScale = new Vector3(objectScale.x*-1,  objectScale.y, objectScale.z);
+        // mTurret3 = turret_3.GetComponent<TurretBehavior>();
+
+        // GameObject turret_4 = GameObject.Instantiate(mTurretTmplate) as GameObject;
+        // Vector3 objectScale2 = turret_4.transform.localScale;
+        // turret_4.transform.localScale = new Vector3(objectScale.x*-1,  objectScale.y, objectScale.z);
+        // turret_4.transform.position = new Vector3(27.5f, -1.6f, 0f);
+        // mTurret4 = turret_4.GetComponent<TurretBehavior>();
+
+        
+        // GameObject cam = Resources.Load<GameObject>("Prefabs/Main Camera");
+        // Runner.Spawn(cam);
+
+        // Debug.Assert(mHero != null);
+        // Debug.Assert(mMinion != null);
+        // Debug.Assert(mTurret != null);
+        // Debug.Assert(mTurret2 != null);
+        // Debug.Assert(mTurret3 != null);
+        // Debug.Assert(mTurret4 != null);
+
+        // mMainCamera = Camera.main.GetComponent<CameraSupport>();    
+        // Debug.Assert(mMainCamera != null);
+
+        // Bounds b = mMainCamera.GetWorldBound();
+        // mEnemySystem = new EnemySpawnSystem(b.min, b.max);
+    }
+
+	void Update () {
+        EchoGameState(); // always do this
+
+        if (Input.GetKey(KeyCode.Q))
+            Application.Quit();
+    }
+
+    private void EchoGameState()
+    {
+        // mGameStateEcho.text =  mHero.GetHeroState() + "  " + mEnemySystem.GetEnemyState();
+        // mGameStateEcho.text = "Null";
+    }
+}
