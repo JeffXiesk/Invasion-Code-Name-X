@@ -41,7 +41,8 @@ For our limited ability, there are still some bugs in our games.
 
 - When network stuck, the bullets spawned from the turret or crystal would travel in a ridiculously low speed.
 
-
+- Because network delay, the client's bullet may suffer from delaying problem, making it seem like not spawn from the client hero's body.
+- The collision of the client's wall may seem like a bit larger than it should be.
 
 
 
