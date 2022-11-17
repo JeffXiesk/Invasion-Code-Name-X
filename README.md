@@ -45,6 +45,16 @@ For our limited ability, there are still some bugs in our games.
 - The collision of the client's wall may seem like a bit larger than it should be.
 
 
+### Demo Show
+- Picture of some scenes
+![pic1](pic/pic1.png)
+![pic2](pic/pic2.png)
+![pic3](pic/pic3.png)
+![pic4](pic/pic4.png)
+
+- Video of some scenes
+You can visit [youtube link](https://www.youtube.com/watch?v=YvcG9Ru_iZ0) of at [github repository](https://github.com/JeffXiesk/Invasion-Code-Name-X/blob/main/pic/SWS3007_07.mp4) for our demo playing.
+
 
 ### Further Development
 
